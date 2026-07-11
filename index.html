@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashmath Shaik</title>
+    <style>
+        :root {
+            --primary-color: #202020;
+            --secondary-color: #202516;
+            --accent-color: #202516;
+            --text-color: #2e2e2d;
+            --light-gray: #ffffff;
+            --border-color: #abacad;
+            --dark-gray: #5a5a58;
+            --yellow-color: #202516;
+            --orange-color: #202516;
+            --red-color: #202516;
+            --link-color: #1a56db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir Next', -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            padding-bottom: 1.0rem;
+            align-items: center;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+
+        .header-content h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
+
+        .title {
+            font-size: 1rem;
+            color: var(--dark-gray);
+            margin-bottom: 0.9rem;
+            font-weight: 500;
+            margin-left: 1rem;
+        }
+
+        .affiliation {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            gap: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background: #f2f1ef;
+            padding: 0.8rem 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            padding: 0.2rem;
+        }
+
+        .cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 0.45rem 0.7rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: white;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .cta-btn.primary {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        .cta-btn:hover {
+            filter: brightness(0.98);
+            text-decoration: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            font-weight: 400;
+        }
+
+        .about-text {
+            font-size: 0.98rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            text-align: justify;
+        }
+
+        .about-text a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1rem 0;
+            margin-bottom: -1rem;
+        }
+
+        .interest-tag {
+            background: var(--light-gray);
+            padding: 0.4rem 0.6rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .publication {
+            background: white;
+            padding: 0.7rem;
+            margin-bottom: 0.7rem;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .publication-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
+        }
+
+        .publication-title a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .publication-authors {
+            color: var(--dark-gray);
+            font-style: normal;
+            flex: 1;
+            min-width: 200px;
+            font-weight: 400;
+        }
+
+        .publication-authors strong {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .publication-venue {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .workshop-venue {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.85rem;
+            padding-top: 0.3rem;
+        }
+
+        .workshop-award {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding-top: 0.3rem;
+        }
+
+        .paper-award {
+            font-weight: 700;
+            color: var(--red-color);
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .publication-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid var(--link-color);
+            border-radius: 3px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .publication-links a:hover {
+            background: var(--link-color);
+            color: white;
+        }
+
+        .material-links {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .material-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid var(--link-color);
+            border-radius: 3px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .material-links a:hover {
+            background: var(--link-color);
+            color: white;
+        }
+
+        .year-section {
+            margin-bottom: 1.2rem;
+        }
+
+        .year-header {
+            font-size: 1.2rem;
+            color: var(--yellow-color);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            border-left: 10px solid var(--yellow-color);
+            padding-left: 1rem;
+        }
+
+        .job-market-item {
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .education-item,
+        .experience-item,
+        .talk-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .education-item h3,
+        .experience-item h3,
+        .talk-item h3 {
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .education-item h3 a,
+        .experience-item h3 a,
+        .talk-item h3 a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .education-item h3 a:hover,
+        .experience-item h3 a:hover,
+        .talk-item h3 a:hover {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .education-item .institution,
+        .experience-item .institution,
+        .talk-item .institution {
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .education-item .institution a,
+        .experience-item .institution a,
+        .talk-item .institution a {
+            color: var(--link-color);
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .education-item .year,
+        .experience-item .year,
+        .talk-item .year {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        .education-item h3 .year,
+        .experience-item h3 .year,
+        .talk-item h3 .year {
+            margin-left: 0.6rem;
+            font-weight: 400;
+        }
+
+        .talk-links {
+            color: var(--secondary-color);
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            padding-top: 0.3rem;
+        }
+
+        .talk-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid var(--link-color);
+            border-radius: 3px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .talk-links a:hover {
+            background: var(--link-color);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        .collapsible-extra {
+            display: none;
+        }
+
+        .collapsible-extra.show {
+            display: block;
+        }
+
+        .view-all {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--link-color);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+                justify-items: center;
+            }
+
+            .header-content h1,
+            .header-content h2 {
+                font-size: 1.9rem;
+                line-height: 1.25;
+            }
+
+            .title {
+                display: block;
+                margin-left: 0;
+                margin-top: 0.4rem;
+                font-size: 0.95rem;
+            }
+
+            .contact-info {
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .publication-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+
+            .publication-authors {
+                min-width: auto;
+            }
+
+            .publication-links {
+                justify-content: flex-start;
+            }
+
+            .education-item h3 .year,
+            .experience-item h3 .year,
+            .talk-item h3 .year {
+                display: block;
+                margin-left: 0;
+                margin-top: 0.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header-content h1,
+            .header-content h2 {
+                font-size: 1.6rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <img src="static/avatar.jpg" alt="Hashmath Shaik" class="profile-img">
+            </div>
+            <div class="header-content">
+                <h2><b>Hashmath</b> <b style="color: var(--yellow-color);">Shaik</b> <span class="title">Ph.D.
+                        Researcher &amp; Applied AI Scientist</span></h2>
+                <p class="affiliation">Stony Brook University</p>
+                <div class="contact-info">
+                    <span><b>Contact:</b> <a href="mailto:hashmath.shaik@stonybrook.edu">hashmath.shaik@stonybrook.edu</a> |
+                        <a href="https://scholar.google.com/citations?user=uaPj1MQAAAAJ" target="_blank"
+                            rel="noopener noreferrer">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/hashmathshaik/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a> |
+                        <a href="https://x.com/hash_math" target="_blank"
+                            rel="noopener noreferrer">X</a>
+                    </span>
+                </div>
+    
+            </div>
+        </header>
+
+        <nav style="padding-top: 0.5em; padding-bottom: 0.5em">
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#awards" class="nav-link">Awards &amp; Talks</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <div class="job-market-item" style="background: #ffffff;
+            border-left: 5px solid var(--secondary-color);
+            margin-top: -0.6em;
+            margin-bottom: 1.25em;
+            padding: 0.75em 0.9em;
+            border-radius: 6px;
+            width: 100%;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.08),
+                        0 3px 6px rgba(0,0,0,0.06);">
+                <strong style="color: var(--primary-color); font-size: 0.98em;">Resume</strong>
+                <span style="margin-left: 0.35em; font-weight: 500; font-size: 0.95em;">Web version + downloadable PDF.</span>
+                <div class="cta-links">
+                    <a class="cta-btn primary" href="resume.html" target="_blank" rel="noopener noreferrer">View Resume</a>
+                    <a class="cta-btn" href="static/CV.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+                </div>
+            </div>
+
+            <p class="about-text">
+                AI researcher with experience at <b>Amazon Science</b>, focused on building neuro-symbolic and
+                tool-augmented LLM systems that deliver measurable impact across production and research settings.
+            </p>
+
+            <p class="about-text">
+                <b>Research focus:</b> Reliable reasoning in large language models, with an emphasis on
+                neuro-symbolic methods, knowledge-graph-grounded verification, mechanistic interpretability
+                for improving reasoning, agentic collaboration, and multimodal representation learning.
+            </p>
+
+            <p class="about-text">
+                For a longer-form view of my research direction, see <a href="research-overview.html">Research Overview</a>.
+            </p>
+
+            <div class="research-interests">
+                <span class="interest-tag">Neuro-Symbolic AI</span>
+                <span class="interest-tag">Knowledge Graphs</span>
+                <span class="interest-tag">Reliable Reasoning</span>
+                <span class="interest-tag">Mechanistic Interpretability</span>
+                <span class="interest-tag">Agentic Systems</span>
+                <span class="interest-tag">Multimodal Representation Learning</span>
+                <span class="interest-tag">Graph Learning</span>
+                <span class="interest-tag">NLP</span>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+
+            <div class="year-section">
+                <div class="year-header">2026</div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Embrace LLM-Based Cognitive Architecture to Boost Team Problem-Solving in Open-Ended Tasks
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A. (2026)</div>
+                        <div class="publication-venue"><em>Systems</em>, 14(3), 313</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://www.mdpi.com/2079-8954/14/3/313" target="_blank" rel="noopener noreferrer">Systems 2026</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Ask, Code, Review: A Three-Module Framework for AI in Programming Labs
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Villuri, G., <strong>Shaik, H.</strong>, Eljamal, B., &amp; Doboli, A. (2026)</div>
+                        <div class="publication-venue"><em>Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education</em></div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3803401.3811959" target="_blank" rel="noopener noreferrer">ITICSE 2026</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Dynamic Adaptation of the LLM Context for Generating Routines with Coupled Semantics
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Villuri, G., <strong>Shaik, H.</strong>, &amp; Doboli, A. (2026)</div>
+                        <div class="publication-venue"><em>International Conference on Artificial Neural Networks</em>, Italy (ICANN 2026)</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://e-nns.org/icann2026/" target="_blank" rel="noopener noreferrer">ICANN 2026</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible-extra" id="more-pubs">
+            <div class="year-section">
+                <div class="year-header">2025</div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Concept Combinations with Generator and Validator Agents Prompted Using Insights from Concept Networks
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, Villuri, G., Doboli, S., &amp; Doboli, A. (2025)</div>
+                        <div class="publication-venue"><em>Complex Networks &amp; Their Applications XIII</em>, Lecture Notes in Computer Science, pp. 164&ndash;174</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-16649-4_15" target="_blank" rel="noopener noreferrer">Complex Networks 2025</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        An Overview of Large Language Models and a Novel, Large Language Model-Based Cognitive Architecture for Solving Open-Ended Problems
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A. (2025)</div>
+                        <div class="publication-venue"><em>Machine Learning and Knowledge Extraction</em>, 7(4), 134</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://www.mdpi.com/2504-4990/7/4/134" target="_blank" rel="noopener noreferrer">MAKE 2025</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Two Large Language Model-based Methods to Validate Open-Ended Problem Solving in Teams
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A. (2025)</div>
+                        <div class="publication-venue"><em>International Conference on Foundation and Large Language Models</em> (FLLM 2025)</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://fllm-conference.org/2025/" target="_blank" rel="noopener noreferrer">FLLM 2025</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Using a Symbolic Knowledge Graph to Address LLM Limitations in Analog Circuit Topology Generation
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, &amp; Doboli, A. (2025)</div>
+                        <div class="publication-venue"><em>IEEE 15th Annual Computing and Communication Workshop and Conference</em>, Las Vegas &mdash; <span class="workshop-award">Best Presentation Award</span></div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://ieee-ccwc.org/ieee-ccwc-2025/" target="_blank" rel="noopener noreferrer">CCWC 2025</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        A Stacked Multi-Layered Perceptron&ndash;LLM Model for Extracting Relations in Textual Descriptions
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Villuri, G., <strong>Shaik, H.</strong>, Doboli, A., &amp; Doboli, S. (2025)</div>
+                        <div class="publication-venue"><em>IEEE Symposium on Computational Intelligence</em>, Norway (SSCI 2025)</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://ieee-ssci.org/" target="_blank" rel="noopener noreferrer">SSCI 2025</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <div class="year-header">2024</div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        An Overview and Discussion on Using Large Language Models for Implementation Generation of Solutions to Open-Ended Problems
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Shaik, H.</strong>, &amp; Doboli, A. (2024)</div>
+                        <div class="publication-venue">arXiv preprint arXiv:2501.00562</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/html/2501.00562v1" target="_blank" rel="noopener noreferrer">arXiv</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <div class="year-header">2023</div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Empowering Transformers for Evidence-Based Medicine
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Mohammed, S., Fiaidhi, J., &amp; <strong>Shaik, H.</strong> (2023)</div>
+                        <div class="publication-venue">medRxiv preprint medRxiv:2023.12.25.23300520</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://www.medrxiv.org/content/10.1101/2023.12.25.23300520v1" target="_blank" rel="noopener noreferrer">medRxiv</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <button class="view-all" data-target="more-pubs" data-more="View all publications (7) &rarr;" data-less="Show fewer &uarr;">View all publications (7) &rarr;</button>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <h3>Applied Scientist Intern – Amazon Science (CA, USA)</h3>
+                <div class="year">06/2026 – Present</div>
+                <div class="institution">
+                    Researching graph representation learning for fraud detection across Amazon's US order network (~1B orders); designed the end-to-end experimentation pipeline and produced the deployment tradeoff analysis projecting up to $80M in annual fraud loss reduction. Reviewed AMLC paper submissions.
+                    </div>
+                </div>
+
+            <div class="experience-item">
+                <h3>Graduate Research Assistant – Stony Brook University (NY, USA)</h3>
+                <div class="year">08/2024 – Present</div>
+                <div class="institution">
+                    Built LLM-based generator&ndash;validator agent pipelines for collaborative coding and open-ended problem solving; designed neuro-symbolic dialogue and code representations combined with symbolic knowledge graphs to constrain and validate LLM outputs in analog circuit topology generation.
+                    </div>
+                </div>
+
+            <div class="collapsible-extra" id="more-experience">
+            <div class="experience-item">
+                <h3>Applied Scientist Intern – Amazon Science (CA, USA)</h3>
+                <div class="year">09/2025 – 01/2026</div>
+                <div class="institution">
+                    Designed and built the first ML-based RAG pipeline for automated forgery detection in police report evidence (Evidence Intelligence), combining multimodal extraction with semantic retrieval and LLM reasoning; improved classification precision from 71% to 80% and recall from 41% to 75%.
+                    </div>
+                </div>
+
+            <div class="experience-item">
+                <h3>Graduate Research Assistant – Mitacs (ON, Canada)</h3>
+                <div class="year">05/2023 – 04/2024</div>
+                <div class="institution">
+                    Developed a clinical question-answering system for PICO-format queries using a two-stage bootstrapping approach with patch attention, achieving 89% answer relevance; deployed a pilot at Thunder Bay Regional Hospital serving 12 clinicians, cutting literature-review time by 60%.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3>AI Software Developer – Aurora Constellations (ON, Canada)</h3>
+                <div class="year">05/2023 – 04/2024</div>
+                <div class="institution">
+                    Designed and developed a healthcare analytics platform integrating LLMs (LLaMA2, GPT) with scalable RESTful APIs via AWS API Gateway, achieving a 40% reduction in network overhead; engineered data analytics pipelines using Python, Hadoop, YARN, and PySpark.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Machine Learning Engineer – Tata Consultancy Services (Client: Deutsche Bank)</h3>
+                <div class="year">08/2021 – 08/2022</div>
+                <div class="institution">
+                    Built core modules of an international banking transaction platform in Java (Spring) with secure transaction workflows and multi-currency support; designed an NLP-based request triaging mechanism using word2vec and GloVe embeddings, reducing manual triage and resolution time by 45%.
+                </div>
+            </div>
+            </div>
+            <button class="view-all" data-target="more-experience" data-more="View previous experience (4) &rarr;" data-less="Show fewer &uarr;">View previous experience (4) &rarr;</button>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+
+            <div class="experience-item">
+                <h3>Introduction to C Programming – Stony Brook University <span class="year">Fall 2026</span></h3>
+                <div class="institution">Head Teaching Assistant &middot; Undergraduate course</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Algorithms and Data Structures – Stony Brook University <span class="year">Summer 2025</span></h3>
+                <div class="institution">Head Teaching Assistant &middot; Undergraduate course</div>
+            </div>
+
+            <div class="collapsible-extra" id="more-teaching">
+            <div class="experience-item">
+                <h3>Introduction to C Programming – Stony Brook University <span class="year">Spring 2025</span></h3>
+                <div class="institution">Head Teaching Assistant &middot; Undergraduate course</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Introduction to C Programming – Stony Brook University <span class="year">Fall 2024</span></h3>
+                <div class="institution">Head Teaching Assistant &middot; Undergraduate course</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Algorithm Design and Analysis – Lakehead University <span class="year">Winter 2024</span></h3>
+                <div class="institution">Head Teaching Assistant &middot; Undergraduate course</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Distributed Systems – Jawaharlal Nehru Technological University, Kakinada <span class="year">Winter 2021</span></h3>
+                <div class="institution">Lab Assistant &middot; Graduate course</div>
+            </div>
+            </div>
+            <button class="view-all" data-target="more-teaching" data-more="View previous teaching (4) &rarr;" data-less="Show fewer &uarr;">View previous teaching (4) &rarr;</button>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="education-item">
+                <h3>Group Chat Simulation with Fine-Tuned Transformers <span class="year">09/2024 &ndash; 01/2025</span></h3>
+                <div class="institution">
+                    Fine-tuned Mistral-7B-v0.1 on ~10,000 messages, achieving a 32% reduction in perplexity and 25% improvement in conversational relevance via 4-bit quantization and LoRA (rank=16); applied conversation segmentation and special speaker tokens, lowering validation loss by 47% over baseline.
+                </div>
+            </div>
+
+            <div class="education-item">
+                <h3>Inclusion Done Right! &ndash; Accessibility App for Community Engagement <span class="year">2024</span></h3>
+                <div class="institution">
+                    Collaborated with Prof. Alex Doboli and the School of Health Professions at Stony Brook University to develop an accessibility app providing real-time, community-based opportunities for individuals with disabilities; presented at an accessibility conference where attendees downloaded the app live via QR code.
+                </div>
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>Awards, Grants &amp; Talks</h2>
+
+            <h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 0.8rem;">Awards &amp; Grants</h3>
+            <div class="education-item">
+                <h3>Best Presentation Award, IEEE CCWC, USA <span class="year">2025</span></h3>
+                <div class="institution">
+                    Awarded at the IEEE 15th Annual Computing and Communication Workshop and Conference (Las Vegas)
+                    for the paper &ldquo;Using a Symbolic Knowledge Graph to Address LLM Limitations in Analog Circuit
+                    Topology Generation,&rdquo; recognizing the clarity and technical depth of the presented work on
+                    combining symbolic knowledge graphs with LLMs to constrain and validate circuit topology
+                    generation.
+                </div>
+            </div>
+            <div class="education-item">
+                <h3>AI Research Grant &ndash; MITACS, Canada <span class="year">2024</span></h3>
+                <div class="institution">
+                    $25,000 CAD awarded through the Mitacs Accelerate program to fund graduate research on a
+                    clinical question-answering system for PICO-format queries, developed using a two-stage
+                    bootstrapping approach with patch attention. The funded research achieved 89% answer relevance
+                    and supported a pilot deployment at Thunder Bay Regional Hospital serving 12 clinicians, cutting
+                    literature-review time by 60%.
+                </div>
+            </div>
+
+            <h3 style="color: var(--primary-color); font-size: 1.1rem; margin: 1.5rem 0 0.8rem;">Talks &amp; Presentations</h3>
+            <div class="talk-item">
+                <h3>Inclusion Done Right! Conference: Advancing Accessibility Through Technology <span class="year">Oct 2024</span></h3>
+                <div class="institution">Conference presentation &middot; Charles B. Wang Center, Stony Brook University, New York</div>
+            </div>
+            <div class="talk-item">
+                <h3>Harnessing Large Language Models for Healthcare Innovation <span class="year">Oct 2023</span></h3>
+                <div class="institution">Invited talk &middot; Lakehead University, Thunder Bay, Ontario, Canada</div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="research-interests">
+                <span class="interest-tag">Python</span>
+                <span class="interest-tag">R</span>
+                <span class="interest-tag">Java</span>
+                <span class="interest-tag">C++</span>
+                <span class="interest-tag">JavaScript</span>
+                <span class="interest-tag">SQL</span>
+                <span class="interest-tag">PyTorch</span>
+                <span class="interest-tag">TensorFlow</span>
+                <span class="interest-tag">Hugging Face</span>
+                <span class="interest-tag">LangChain</span>
+                <span class="interest-tag">Scikit-Learn</span>
+                <span class="interest-tag">SpaCy</span>
+                <span class="interest-tag">Docker</span>
+                <span class="interest-tag">SageMaker</span>
+                <span class="interest-tag">MLflow</span>
+                <span class="interest-tag">Apache Airflow</span>
+                <span class="interest-tag">Bedrock</span>
+                <span class="interest-tag">Neo4j</span>
+                <span class="interest-tag">Pinecone</span>
+                <span class="interest-tag">GraphRAG</span>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p class="about-text">
+                Email: <a href="mailto:hashmath.shaik@stonybrook.edu">hashmath.shaik@stonybrook.edu</a>
+                &nbsp;|&nbsp; <a href="https://scholar.google.com/citations?user=uaPj1MQAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/hashmathshaik/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                &nbsp;|&nbsp; <a href="https://x.com/hash_math" target="_blank" rel="noopener noreferrer">X</a>
+            </p>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Hashmath Shaik. Last updated: July 2026</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // "View all" / "Show fewer" toggles for long sections
+            document.querySelectorAll('.view-all').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const target = document.getElementById(this.getAttribute('data-target'));
+                    if (!target) return;
+                    const expanded = target.classList.toggle('show');
+                    this.innerHTML = expanded
+                        ? this.getAttribute('data-less')
+                        : this.getAttribute('data-more');
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        // Auto-expand any collapsed content within the target section
+                        target.querySelectorAll('.collapsible-extra').forEach(extra => {
+                            extra.classList.add('show');
+                        });
+                        target.querySelectorAll('.view-all').forEach(btn => {
+                            btn.innerHTML = btn.getAttribute('data-less');
+                        });
+
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Highlight active section in navigation
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Fade-in animation for sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('section, .publication').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

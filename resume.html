@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Hashmath Shaik</title>
+    <style>
+        :root {
+            --primary-color: #202020;
+            --secondary-color: #202516;
+            --accent-color: #202516;
+            --text-color: #2e2e2d;
+            --light-gray: #ffffff;
+            --border-color: #abacad;
+            --dark-gray: #5a5a58;
+            --link-color: #1a56db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir Next', -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: var(--light-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 650;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--dark-gray);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .actions {
+            margin-top: 0.9rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.55rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: white;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .btn.primary {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            filter: brightness(0.98);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        section {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.35rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .item-meta {
+            color: var(--dark-gray);
+            font-weight: 500;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin: 0.25rem 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .skills-table td {
+            vertical-align: top;
+            padding: 0.45rem 0;
+        }
+
+        .skills-table td:first-child {
+            width: 230px;
+            font-weight: 700;
+            color: var(--primary-color);
+            padding-right: 0.75rem;
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .skills-table td:first-child {
+                width: 130px;
+            }
+
+            .top-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .links {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .skills-table td {
+                display: block;
+                width: 100% !important;
+                padding: 0.15rem 0;
+            }
+
+            .skills-table td:first-child {
+                padding-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-row">
+                <div>
+                    <h1>Hashmath Shaik</h1>
+                    <div class="subtitle">Stony Brook, NY · +1 (934) 246-4403</div>
+                </div>
+                <div class="links">
+                    <a href="mailto:hashmath.shaik@stonybrook.edu">hashmath.shaik@stonybrook.edu</a>
+                    <a href="https://scholar.google.com/citations?user=uaPj1MQAAAAJ" target="_blank"
+                        rel="noopener noreferrer">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/hashmathshaik/" target="_blank"
+                        rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://x.com/hash_math" target="_blank"
+                        rel="noopener noreferrer">X</a>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a class="btn primary" href="static/CV.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+                <a class="btn" href="index.html">Back to Home</a>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>Summary</h2>
+                <p>
+                    AI researcher with experience at <strong>Amazon Science</strong>, focused on building
+                    neuro-symbolic and tool-augmented LLM systems that deliver measurable impact across production
+                    and research settings. Research focus: reliable reasoning in large language models, with an
+                    emphasis on neuro-symbolic methods, knowledge-graph-grounded verification, mechanistic
+                    interpretability for improving reasoning, agentic collaboration, and multimodal representation
+                    learning.
+                </p>
+            </section>
+
+            <section>
+                <h2>Education</h2>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">PhD in Computer Engineering, Stony Brook University (GPA: 3.89/4.0)</div>
+                        <div class="item-meta">08/2024 – Present</div>
+                        <ul>
+                            <li><strong>Research Focus:</strong> Neuro-symbolic and tool-augmented large language
+                                models for reliable reasoning, with an emphasis on verification-aware prompting,
+                                reinforcement learning for tool-use policies, and agentic collaboration in open-ended
+                                coding and problem-solving tasks.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">M.Sc. in Computer Science, Lakehead University, Canada (GPA: 4.00/4.0)</div>
+                        <div class="item-meta">09/2022 – 05/2024</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Skills</h2>
+                <table class="skills-table">
+                    <tr>
+                        <td>Programming</td>
+                        <td>Python, R, Java, C++, JavaScript, SQL</td>
+                    </tr>
+                    <tr>
+                        <td>LLMs &amp; Reasoning</td>
+                        <td>Agentic Systems, RAG, Prompt Optimization, Function Calling</td>
+                    </tr>
+                    <tr>
+                        <td>Model Training &amp; Adaptation</td>
+                        <td>Fine-tuning (LoRA, QLoRA), Instruction Tuning, Model Evaluation</td>
+                    </tr>
+                    <tr>
+                        <td>Frameworks &amp; Libraries</td>
+                        <td>PyTorch, TensorFlow, Hugging Face, LangChain, Scikit-Learn, SpaCy</td>
+                    </tr>
+                    <tr>
+                        <td>Multimodal &amp; Speech</td>
+                        <td>ASR (Whisper), CoreNLP, Vision-Language Models (Qwen2.5-VL)</td>
+                    </tr>
+                    <tr>
+                        <td>MLOps &amp; Deployment</td>
+                        <td>Git, Docker, Linux, SageMaker, MLflow, Apache Airflow, Bedrock</td>
+                    </tr>
+                    <tr>
+                        <td>Data &amp; Knowledge Systems</td>
+                        <td>MySQL, PostgreSQL, Neo4j, Vector Databases (Pinecone), GraphRAG</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Publications</h2>
+                <div class="item-title">2026</div>
+                <ul>
+                    <li>
+                        <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A. (2026).
+                        <em>Embrace LLM-Based Cognitive Architecture to Boost Team Problem-Solving in Open-Ended Tasks.</em>
+                        <span class="item-meta">Systems, 14(3), 313.</span>
+                        <a href="https://www.mdpi.com/2079-8954/14/3/313" target="_blank" rel="noopener noreferrer"><strong>(Systems 2026)</strong></a>
+                    </li>
+                    <li>
+                        Villuri, G., <strong>Shaik, H.</strong>, Eljamal, B., &amp; Doboli, A. (2026).
+                        <em>Ask, Code, Review: A Three-Module Framework for AI in Programming Labs.</em>
+                        <span class="item-meta">Proceedings of the 31st ACM Conference on Innovation and Technology in Computer Science Education.</span>
+                        <a href="https://dl.acm.org/doi/10.1145/3803401.3811959" target="_blank" rel="noopener noreferrer"><strong>(ITICSE 2026)</strong></a>
+                    </li>
+                    <li>
+                        Villuri, G., <strong>Shaik, H.</strong>, &amp; Doboli, A. (2026).
+                        <em>Dynamic Adaptation of the LLM Context for Generating Routines with Coupled Semantics.</em>
+                        <span class="item-meta">International Conference on Artificial Neural Networks, Italy.</span>
+                        <a href="https://e-nns.org/icann2026/" target="_blank" rel="noopener noreferrer"><strong>(ICANN 2026)</strong></a>
+                    </li>
+                </ul>
+
+                <div class="item-title">2025</div>
+                <ul>
+                    <li>
+                        <strong>Shaik, H.</strong>, Villuri, G., Doboli, S., &amp; Doboli, A.
+                        <em>Concept Combinations with Generator and Validator Agents Prompted Using Insights from
+                            Concept Networks.</em>
+                        <span class="item-meta">Complex Networks &amp; Their Applications XIII, Lecture Notes in Computer Science, pp. 164&ndash;174.</span>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-032-16649-4_15"
+                            target="_blank" rel="noopener noreferrer"><strong>(Complex Networks 2025)</strong></a>
+                    </li>
+                    <li>
+                        <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A.
+                        <em>An Overview of Large Language Models and a Novel, Large Language Model-Based Cognitive
+                            Architecture for Solving Open-Ended Problems.</em>
+                        <span class="item-meta">Machine Learning and Knowledge Extraction, 7(4), 134.</span>
+                        <a href="https://www.mdpi.com/2504-4990/7/4/134" target="_blank"
+                            rel="noopener noreferrer"><strong>(MAKE 2025)</strong></a>
+                    </li>
+                    <li>
+                        <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A.
+                        <em>Two Large Language Model-based Methods to Validate Open-Ended Problem Solving in Teams.</em>
+                        <span class="item-meta">International Conference on Foundation and Large Language Models.</span>
+                        <a href="https://fllm-conference.org/2025/" target="_blank"
+                            rel="noopener noreferrer"><strong>(FLLM 2025)</strong></a>
+                    </li>
+                    <li>
+                        <strong>Shaik, H.</strong>, &amp; Doboli, A.
+                        <em>Using a Symbolic Knowledge Graph to Address LLM Limitations in Analog Circuit Topology
+                            Generation.</em>
+                        <span class="item-meta">IEEE 15th Annual Computing and Communication Workshop and Conference, Las Vegas. Best Presentation Award.</span>
+                        <a href="https://ieee-ccwc.org/ieee-ccwc-2025/" target="_blank"
+                            rel="noopener noreferrer"><strong>(CCWC 2025)</strong></a>
+                    </li>
+                    <li>
+                        Villuri, G., <strong>Shaik, H.</strong>, Doboli, A., &amp; Doboli, S.
+                        <em>A Stacked Multi-Layered Perceptron&ndash;LLM Model for Extracting Relations in Textual
+                            Descriptions.</em>
+                        <span class="item-meta">IEEE Symposium on Computational Intelligence, Norway.</span>
+                        <a href="https://ieee-ssci.org/" target="_blank"
+                            rel="noopener noreferrer"><strong>(SSCI 2025)</strong></a>
+                    </li>
+                </ul>
+
+                <div class="item-title">2024</div>
+                <ul>
+                    <li>
+                        <strong>Shaik, H.</strong>, &amp; Doboli, A. (2024).
+                        <em>An Overview and Discussion on Using Large Language Models for Implementation Generation
+                            of Solutions to Open-Ended Problems.</em>
+                        <span class="item-meta">arXiv preprint arXiv:2501.00562.</span>
+                        <a href="https://arxiv.org/html/2501.00562v1" target="_blank"
+                            rel="noopener noreferrer"><strong>(arXiv)</strong></a>
+                    </li>
+                </ul>
+
+                <div class="item-title">2023</div>
+                <ul>
+                    <li>
+                        Mohammed, S., Fiaidhi, J., &amp; <strong>Shaik, H.</strong> (2023).
+                        <em>Empowering Transformers for Evidence-Based Medicine.</em>
+                        <span class="item-meta">medRxiv preprint medRxiv:2023.12.25.23300520.</span>
+                        <a href="https://www.medrxiv.org/content/10.1101/2023.12.25.23300520v1" target="_blank"
+                            rel="noopener noreferrer"><strong>(medRxiv)</strong></a>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Research Experience</h2>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Graduate Research Assistant – Stony Brook University (NY, USA)</div>
+                        <div class="item-meta">08/2024 – Present</div>
+                        <ul>
+                            <li>Built LLM-based generator&ndash;validator agent pipelines for collaborative coding and
+                                open-ended problem solving, enabling static and real-time multi-agent evaluation of
+                                reasoning and implementation correctness.</li>
+                            <li>Designed neuro-symbolic dialogue and code representations grounded in operational and
+                                axiomatic semantics, combined with symbolic knowledge graphs to constrain and validate
+                                LLM outputs in analog circuit topology generation.</li>
+                            <li>Developed tool-augmented, cognitive-architecture-style LLM systems for team-based
+                                open-ended problem solving, integrating concept networks and structured validation to
+                                reduce hallucinated or unsupported reasoning steps.</li>
+                            <li>Led research on reliable LLM reasoning through validation, symbolic structure, and
+                                agentic workflows, resulting in multiple peer-reviewed publications (MAKE, Complex
+                                Networks, FLLM, CCWC, Systems).</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">Graduate Research Assistant – Mitacs (ON, Canada)</div>
+                        <div class="item-meta">05/2023 – 04/2024</div>
+                        <ul>
+                            <li>Developed a clinical question-answering system for PICO-format queries using a
+                                two-stage bootstrapping approach with patch attention, achieving 89% answer relevance
+                                and outperforming prior baselines by 4.2 F1 points on clinical evidence extraction.</li>
+                            <li>Deployed a pilot at Thunder Bay Regional Hospital serving 12 clinicians, cutting
+                                literature-review time by 60% and improving answer precision by 11% across three
+                                clinical domains.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Professional Experience</h2>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Applied Scientist Intern – Amazon Science (CA, USA)</div>
+                        <div class="item-meta">06/2026 – Present</div>
+                        <ul>
+                            <li>Researched graph representation learning methods for fraud detection across Amazon's
+                                entire US order network (~1 billion orders), formulating the problem as similarity
+                                search over learned embeddings to match new activity to previously identified fraud
+                                rings under real-time inference constraints.</li>
+                            <li>Designed the experimentation pipeline end to end: constructing training datasets from
+                                graph-structured order data, developing a custom labeling strategy that expanded usable
+                                training data by 3x, and training and evaluating graph learning models on AWS
+                                SageMaker GPU infrastructure.</li>
+                            <li>Quantified deployment tradeoffs (precision, recall, and inference latency) across
+                                candidate graph learning architectures, producing the technical analysis that
+                                projected a reduction of up to $80M in annual fraud losses if adopted, to support the
+                                team's production readiness review.</li>
+                            <li>Reviewed paper submissions for Amazon's internal Machine Learning Conference (AMLC),
+                                evaluating technical soundness and providing structured feedback as part of Amazon's
+                                internal scientific peer-review process.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">Applied Scientist Intern – Amazon Science (CA, USA)</div>
+                        <div class="item-meta">09/2025 – 01/2026</div>
+                        <ul>
+                            <li>Designed and built the first ML-based Retrieval-Augmented Generation (RAG) pipeline
+                                for automated forgery detection in police report evidence under the Evidence
+                                Intelligence initiative, targeting a use case tied to significant annual
+                                concession-loss exposure.</li>
+                            <li>Combined multimodal extraction (visual and textual document features) with semantic
+                                retrieval and LLM-based reasoning, replacing a KNN similarity baseline and improving
+                                classification precision from 71% to 80% and recall from 41% to 75%.</li>
+                            <li>Explored document representation learning through vision-language embeddings and
+                                multi-vector representations preserving layout and typographic structure, establishing
+                                the technical foundation the initiative continued to build on after the internship.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">AI Software Developer – Aurora Constellations (ON, Canada)</div>
+                        <div class="item-meta">05/2023 – 04/2024</div>
+                        <ul>
+                            <li>Designed and developed a healthcare analytics platform integrating LLMs (LLaMA2, GPT)
+                                with scalable RESTful APIs via AWS API Gateway, achieving a 40% reduction in network
+                                overhead.</li>
+                            <li>Engineered data analytics pipelines using Python, Hadoop, YARN, and PySpark, and built
+                                responsive front-end interfaces improving query efficiency through optimized Hive
+                                queries.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">Machine Learning Engineer – Tata Consultancy Services (Client: Deutsche Bank)</div>
+                        <div class="item-meta">08/2021 – 08/2022</div>
+                        <ul>
+                            <li>Built core modules of an international banking transaction platform in Java (Spring),
+                                including the funds transfer page with secure transaction workflows, multi-currency
+                                support, and input validation.</li>
+                            <li>Designed an NLP-based request triaging mechanism using word2vec and GloVe embeddings,
+                                reducing manual triage effort and resolution time by 45%, and engineered supporting
+                                data pipelines with Apache Airflow, PySpark, and MLflow for transaction monitoring and
+                                anomaly detection.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Teaching</h2>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Introduction to C Programming &ndash; Stony Brook University</div>
+                        <div class="item-meta">Head Teaching Assistant &middot; Undergraduate &middot; Fall 2026</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Algorithms and Data Structures &ndash; Stony Brook University</div>
+                        <div class="item-meta">Head Teaching Assistant &middot; Undergraduate &middot; Summer 2025</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Introduction to C Programming &ndash; Stony Brook University</div>
+                        <div class="item-meta">Head Teaching Assistant &middot; Undergraduate &middot; Spring 2025</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Introduction to C Programming &ndash; Stony Brook University</div>
+                        <div class="item-meta">Head Teaching Assistant &middot; Undergraduate &middot; Fall 2024</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Algorithm Design and Analysis &ndash; Lakehead University</div>
+                        <div class="item-meta">Head Teaching Assistant &middot; Undergraduate &middot; Winter 2024</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Distributed Systems &ndash; Jawaharlal Nehru Technological University, Kakinada</div>
+                        <div class="item-meta">Lab Assistant &middot; Graduate &middot; Winter 2021</div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Projects</h2>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Group Chat Simulation with Fine-Tuned Transformers</div>
+                        <div class="item-meta">09/2024 &ndash; 01/2025</div>
+                        <ul>
+                            <li>Fine-tuned Mistral-7B-v0.1 on ~10,000 messages, achieving a 32% reduction in
+                                perplexity and 25% improvement in conversational relevance via 4-bit quantization and
+                                LoRA (rank=16).</li>
+                            <li>Applied conversation segmentation and special speaker tokens, lowering validation
+                                loss by 47% over baseline and improving dialogue coherence by 20%.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="item-title">Inclusion Done Right! &ndash; Accessibility App for Community Engagement</div>
+                        <div class="item-meta">2024</div>
+                        <ul>
+                            <li>Collaborated with Prof. Alex Doboli and the School of Health Professions at Stony
+                                Brook University to develop an accessibility app providing real-time community-based
+                                opportunities for individuals with disabilities.</li>
+                            <li>Presented at an accessibility conference; attendees downloaded the app live via QR
+                                code, demonstrating immediate practical impact.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Awards, Grants &amp; Talks</h2>
+                <div class="item-title" style="margin-bottom: 0.6rem;">Awards &amp; Grants</div>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Best Presentation Award, IEEE CCWC, USA</div>
+                        <div class="item-meta">2025</div>
+                        <p>
+                            Awarded at the IEEE 15th Annual Computing and Communication Workshop and Conference
+                            (Las Vegas) for the paper &ldquo;Using a Symbolic Knowledge Graph to Address LLM
+                            Limitations in Analog Circuit Topology Generation,&rdquo; recognizing the clarity and
+                            technical depth of the presented work on combining symbolic knowledge graphs with LLMs
+                            to constrain and validate circuit topology generation.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="item-title">AI Research Grant &ndash; MITACS, Canada</div>
+                        <div class="item-meta">2024</div>
+                        <p>
+                            $25,000 CAD awarded through the Mitacs Accelerate program to fund graduate research on
+                            a clinical question-answering system for PICO-format queries, developed using a
+                            two-stage bootstrapping approach with patch attention. The funded research achieved
+                            89% answer relevance and supported a pilot deployment at Thunder Bay Regional Hospital
+                            serving 12 clinicians, cutting literature-review time by 60%.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="item-title" style="margin: 1.25rem 0 0.6rem;">Talks &amp; Presentations</div>
+                <div class="grid">
+                    <div>
+                        <div class="item-title">Inclusion Done Right! Conference: Advancing Accessibility Through Technology</div>
+                        <div class="item-meta">Conference presentation &middot; Charles B. Wang Center, Stony Brook University, New York &middot; Oct 2024</div>
+                    </div>
+                    <div>
+                        <div class="item-title">Harnessing Large Language Models for Healthcare Innovation</div>
+                        <div class="item-meta">Invited talk &middot; Lakehead University, Thunder Bay, Ontario, Canada &middot; Oct 2023</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
+
+

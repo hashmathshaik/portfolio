@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Overview - Hashmath Shaik</title>
+    <style>
+        :root {
+            --primary-color: #202020;
+            --secondary-color: #202516;
+            --accent-color: #202516;
+            --text-color: #2e2e2d;
+            --light-gray: #ffffff;
+            --border-color: #abacad;
+            --dark-gray: #5a5a58;
+            --link-color: #1a56db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Avenir Next', -apple-system, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: var(--light-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 650;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            color: var(--dark-gray);
+            font-weight: 500;
+            margin-top: 0.25rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .actions {
+            margin-top: 0.9rem;
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.55rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: white;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .btn:hover {
+            text-decoration: none;
+            filter: brightness(0.98);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        section {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.25rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.35rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .subsection-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .subsection-title:first-child {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 0.75rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        li {
+            margin: 0.3rem 0;
+        }
+
+        .item-meta {
+            color: var(--dark-gray);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .top-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .actions {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-row">
+                <div>
+                    <h1>Research Overview</h1>
+                    <div class="subtitle">Hashmath Shaik &middot; Stony Brook University</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a class="btn" href="index.html">Back to Home</a>
+                <a class="btn" href="resume.html">View Resume</a>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <h2>Research Direction</h2>
+                <p>
+                    My research centers on reliable reasoning in large language models &mdash; building systems
+                    that don't just generate plausible-sounding output, but can be verified, constrained, and
+                    trusted in open-ended, multi-step tasks. I approach this from a neuro-symbolic angle: pairing
+                    LLMs with symbolic structure (knowledge graphs, concept networks, operational and axiomatic
+                    semantics) so that generation is checked against explicit constraints rather than relying on
+                    the model's fluency alone.
+                </p>
+                <p>
+                    A second thread of my work is agentic collaboration &mdash; using generator&ndash;validator
+                    agent pipelines and tool-augmented workflows to let multiple LLM-based agents cross-check each
+                    other's reasoning in collaborative coding and open-ended problem-solving settings. The goal in
+                    both threads is the same: reduce hallucinated or unsupported reasoning steps and make LLM
+                    outputs auditable, whether the task is validating a team's problem-solving process, generating
+                    circuit topologies, or extracting information from real-world documents.
+                </p>
+                <p>
+                    A third, increasingly central direction is mechanistic interpretability for improving
+                    reasoning &mdash; looking inside models to understand the internal computations behind their
+                    reasoning, and using those insights to make reasoning more reliable rather than treating the
+                    model as a black box. This complements the neuro-symbolic and agentic threads: where those add
+                    external structure and verification, interpretability aims to understand and steer the
+                    reasoning process from within.
+                </p>
+                <p>
+                    This research direction has carried directly into applied work at Amazon Science, where I've
+                    worked on graph representation learning for fraud detection and multimodal document
+                    understanding &mdash; both settings where reliability, not just accuracy, is the binding
+                    constraint on deployment.
+                </p>
+            </section>
+
+            <section>
+                <h2>Experience</h2>
+
+                <p class="subsection-title">Graduate Research Assistant &mdash; Stony Brook University (08/2024 &ndash; Present)</p>
+                <ul>
+                    <li>Built LLM-based generator&ndash;validator agent pipelines for collaborative coding and
+                        open-ended problem solving, enabling static and real-time multi-agent evaluation of
+                        reasoning and implementation correctness.</li>
+                    <li>Designed neuro-symbolic dialogue and code representations grounded in operational and
+                        axiomatic semantics, combined with symbolic knowledge graphs to constrain and validate LLM
+                        outputs in analog circuit topology generation.</li>
+                    <li>Developed tool-augmented, cognitive-architecture-style LLM systems for team-based
+                        open-ended problem solving, integrating concept networks and structured validation to
+                        reduce hallucinated or unsupported reasoning steps.</li>
+                </ul>
+
+                <p class="subsection-title">Applied Scientist Intern &mdash; Amazon Science (06/2026 &ndash; Present)</p>
+                <ul>
+                    <li>Researched graph representation learning methods for fraud detection across Amazon's US
+                        order network, formulating the problem as similarity search over learned embeddings.</li>
+                    <li>Reviewed paper submissions for Amazon's internal Machine Learning Conference (AMLC) as
+                        part of Amazon's internal scientific peer-review process.</li>
+                </ul>
+
+                <p class="subsection-title">Applied Scientist Intern &mdash; Amazon Science (09/2025 &ndash; 01/2026)</p>
+                <ul>
+                    <li>Designed and built the first ML-based Retrieval-Augmented Generation (RAG) pipeline for
+                        automated forgery detection in police report evidence, combining multimodal extraction
+                        with semantic retrieval and LLM-based reasoning.</li>
+                </ul>
+
+                <p class="subsection-title">Graduate Research Assistant &mdash; Mitacs (05/2023 &ndash; 04/2024)</p>
+                <ul>
+                    <li>Developed a clinical question-answering system for PICO-format queries using a two-stage
+                        bootstrapping approach with patch attention, deployed as a pilot at Thunder Bay Regional
+                        Hospital.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Selected Publications</h2>
+
+                <p>
+                    <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A.
+                    <em>Embrace LLM-Based Cognitive Architecture to Boost Team Problem-Solving in Open-Ended Tasks.</em>
+                    <span class="item-meta">Systems, 14(3), 313.</span>
+                    <a href="https://www.mdpi.com/2079-8954/14/3/313" target="_blank" rel="noopener noreferrer">(Systems 2026)</a>
+                </p>
+                <p>
+                    Villuri, G., <strong>Shaik, H.</strong>, Eljamal, B., &amp; Doboli, A.
+                    <em>Ask, Code, Review: A Three-Module Framework for AI in Programming Labs.</em>
+                    <span class="item-meta">Proceedings of the 31st ACM Conference on Innovation and Technology in
+                        Computer Science Education.</span>
+                    <a href="https://dl.acm.org/doi/10.1145/3803401.3811959" target="_blank" rel="noopener noreferrer">(ITICSE 2026)</a>
+                </p>
+                <p>
+                    Villuri, G., <strong>Shaik, H.</strong>, &amp; Doboli, A.
+                    <em>Dynamic Adaptation of the LLM Context for Generating Routines with Coupled Semantics.</em>
+                    <span class="item-meta">International Conference on Artificial Neural Networks, Italy.</span>
+                    <a href="https://e-nns.org/icann2026/" target="_blank" rel="noopener noreferrer">(ICANN 2026)</a>
+                </p>
+                <p>
+                    <strong>Shaik, H.</strong>, Villuri, G., Doboli, S., &amp; Doboli, A.
+                    <em>Concept Combinations with Generator and Validator Agents Prompted Using Insights from
+                        Concept Networks.</em>
+                    <span class="item-meta">Complex Networks &amp; Their Applications XIII, Lecture Notes in
+                        Computer Science, pp. 164&ndash;174.</span>
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-032-16649-4_15" target="_blank"
+                        rel="noopener noreferrer">(Complex Networks 2025)</a>
+                </p>
+                <p>
+                    <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A.
+                    <em>An Overview of Large Language Models and a Novel, Large Language Model-Based Cognitive
+                        Architecture for Solving Open-Ended Problems.</em>
+                    <span class="item-meta">Machine Learning and Knowledge Extraction, 7(4), 134.</span>
+                    <a href="https://www.mdpi.com/2504-4990/7/4/134" target="_blank" rel="noopener noreferrer">(MAKE 2025)</a>
+                </p>
+                <p>
+                    <strong>Shaik, H.</strong>, Villuri, G., &amp; Doboli, A.
+                    <em>Two Large Language Model-based Methods to Validate Open-Ended Problem Solving in Teams.</em>
+                    <span class="item-meta">International Conference on Foundation and Large Language Models.</span>
+                    <a href="https://fllm-conference.org/2025/" target="_blank" rel="noopener noreferrer">(FLLM 2025)</a>
+                </p>
+                <p>
+                    <strong>Shaik, H.</strong>, &amp; Doboli, A.
+                    <em>Using a Symbolic Knowledge Graph to Address LLM Limitations in Analog Circuit Topology
+                        Generation.</em>
+                    <span class="item-meta">IEEE 15th Annual Computing and Communication Workshop and Conference,
+                        Las Vegas. Best Presentation Award.</span>
+                    <a href="https://ieee-ccwc.org/ieee-ccwc-2025/" target="_blank" rel="noopener noreferrer">(CCWC 2025)</a>
+                </p>
+                <p>
+                    Villuri, G., <strong>Shaik, H.</strong>, Doboli, A., &amp; Doboli, S.
+                    <em>A Stacked Multi-Layered Perceptron&ndash;LLM Model for Extracting Relations in Textual
+                        Descriptions.</em>
+                    <span class="item-meta">IEEE Symposium on Computational Intelligence, Norway.</span>
+                    <a href="https://ieee-ssci.org/" target="_blank" rel="noopener noreferrer">(SSCI 2025)</a>
+                </p>
+                <p>
+                    <strong>Shaik, H.</strong>, &amp; Doboli, A.
+                    <em>An Overview and Discussion on Using Large Language Models for Implementation Generation of
+                        Solutions to Open-Ended Problems.</em>
+                    <span class="item-meta">arXiv preprint arXiv:2501.00562.</span>
+                    <a href="https://arxiv.org/html/2501.00562v1" target="_blank" rel="noopener noreferrer">(arXiv)</a>
+                </p>
+                <p>
+                    Mohammed, S., Fiaidhi, J., &amp; <strong>Shaik, H.</strong>
+                    <em>Empowering Transformers for Evidence-Based Medicine.</em>
+                    <span class="item-meta">medRxiv preprint medRxiv:2023.12.25.23300520.</span>
+                    <a href="https://www.medrxiv.org/content/10.1101/2023.12.25.23300520v1" target="_blank" rel="noopener noreferrer">(medRxiv)</a>
+                </p>
+
+                <p style="margin-top: 1rem;">See the <a href="index.html#publications">full publication list</a> for complete details.</p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
